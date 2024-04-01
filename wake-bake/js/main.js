@@ -9,7 +9,10 @@
 
     for (let i = 0; i < navList.length; i++) {
         navList[i].addEventListener('click', () => {
-            body.classList.remove('body--opened-menu')
+            if(body.classList.contains('body--opened-menu')){
+                body.classList.remove('body--opened-menu')
+            } else return
+            
         })
     }
 })()
